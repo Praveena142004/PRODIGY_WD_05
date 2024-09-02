@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather_app</title>
+    <link rel="icon" href="photos/icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-title">Weather App</div>
+      <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+              <button class="dropbtn">Citys</button>
+              <div class="dropdown-content">
+                  <a href="#" onclick="selectOption('Mumbai')">Mumbai</a>
+                  <a href="#" onclick="selectOption('Delhi')">Delhi</a>
+                  <a href="#" onclick="selectOption('Kolkata')">Kolkata</a>
+                  <a href="#" onclick="selectOption('Pune')">Pune</a>
+                  <a href="#" onclick="selectOption('Bengaluru')">Bengaluru</a>
+              </div>
+          </li>
+      </ul>
+      <div class="search-container">
+          <input type="text" id="search-box" placeholder="Search city....">
+          <button type="button" onclick="searchFunction()" id="searchbtn">Search</button>
+      </div>
+    </nav>
+   <div class="container">
+      <div class="errbackground">
+        <img src="photos/errorbg.jpg" alt="error">
+        <div class="img">
+          <img src="photos/404.png" alt="error">
+        </div>
+      </div>
+
+      <div class="weather-body">
+        <img src="photos/clearbg.jpg" alt="Weather image" class="background">
+
+        <div class="weather-box">
+          <h3>Now</h3>
+          <img src="photos/clear.png" alt="weather logo" class="logo">
+          <p class="temperature">0 <sup>°C</sup></p>
+          <p class="description"> clear cloud</p>
+        </div>
+
+        <div class="weather-detail">
+          <div class="humidity">
+            <i class="fa-solid fa-droplet"></i>
+            <div class="text">
+              <span id="humidity">45%</span>
+              <p>Humidity :</p>
+            </div>
+          </div>
+
+          <div class="wind">           
+            <i class="fa-solid fa-wind"></i>           
+            <div class="text">
+              <span id="wind-speed">12 Km/Hr</span>
+              <p>Wind Speed :</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+    <script src="app.js"></script>
+  </body>
+</html>
